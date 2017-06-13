@@ -71,5 +71,3 @@ $botman->receivesLocation(function ($bot, Location $locate){
 });
 
 $loop->run();
-
-?>
