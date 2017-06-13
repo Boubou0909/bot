@@ -76,3 +76,5 @@ $botman->hears('{emoji}',function($bot, $emoji){
 });
 
 $loop->run();
+
+?>
