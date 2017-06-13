@@ -9,7 +9,7 @@ use Mpociot\BotMan\Messages\Message;
 $loop = Factory::create();
 
 $botman = BotManFactory::createForRTM([
-    'slack_token' => 'xoxb-196287387540-bba3bqAKwwww98vbLBBxUtgw'
+    'slack_token' => 'xoxb-196287387540-YNi7vbaimSPmWWLLqV54yC8J'
 ], $loop);
 
 $botman->hears('hello', function(\Mpociot\BotMan\BotMan $bot) {
