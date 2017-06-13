@@ -46,11 +46,11 @@ $botman->hears('Forget me', function($bot){
     $bot->reply('I don\'t know anymore who you are.');
 });
 
-$botman->hears('Who am I', function($bot){
+$botman->hears('What is my name', function($bot){
     $user = $bot->userStorage()->get();
     if ($user->has('name')){
         $bot->typesAndWaits(2);
-        $bot->reply('Your are ' . $user->get('name'));
+        $bot->reply('Your name is ' . $user->get('name'));
     }
     else{
         $bot->typesAndWaits(2);
