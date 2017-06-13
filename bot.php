@@ -17,7 +17,7 @@ $botman->hears('hello', function(\Mpociot\BotMan\BotMan $bot) {
     $bot->reply(':wave:');
 });
 
-$botman->hears('call me {name}', function(\Mpociot\BotMan\BotMan $bot, $name){
+$botman->hears('I am {name}', function(\Mpociot\BotMan\BotMan $bot, $name){
     $bot->typesAndWaits(2);
     $bot->userStorage()->save([
          'name' => $name
