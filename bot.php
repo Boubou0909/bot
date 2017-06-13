@@ -65,6 +65,11 @@ $botman->hears('{emoji}',function($bot, $emoji){
     }
 });
 
+$botman->receivesLocation(function ($bot, Location $locate){
+    $lat = $locate->getLatitude();
+    $lon = $locate->getLongitude();
+});
+
 $loop->run();
 
 ?>
