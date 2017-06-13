@@ -32,16 +32,6 @@ $botman->hears('I want ([0-9]+)', function (\Mpociot\BotMan\BotMan $bot, $number
     $bot->reply('You will get : '. $number);
 });
 
-$botman->receivesImages(function(\Mpociot\BotMan\BotMan $bot, $images) {
-    $bot->reply("Ok");
-});
-
-$botman->hears('keyword', function (\Mpociot\BotMan\BotMan $bot) {
-    $message = Message::create('This is my text');
-    $bot->typesAndWaits(2);
-    $bot->reply($message);
-});
-
 $botman->hears('Hi', function($bot) {
     $user = $bot->getUser();
     $bot->typesAndWaits(2);
