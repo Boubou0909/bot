@@ -55,6 +55,7 @@ $botman->hears('Cette figurine est {answer}',function($bot, $answer) use (&$etat
     }
     else if ($etat == 2 and $answer != $ligne){
         $bot->reply("Ce n'est pas la bonne réponse.");
+        $bot->reply('La bonne réponse était :' . $ligne);
     }
     $bot->reply('Taper "Ok" pour continuer et "End" pour finir.');
 });
@@ -80,6 +81,9 @@ $botman->hears("{continue}",function($bot, $continue) use(&$etat, &$points, &$li
     else if($continue == "End"){
         $etat = 0;
         $bot->reply("Ton score est de " . $points . ' sur ' . $compteur);
+    }
+    else{
+        $bot->reply('Pour commencer une nouvelle partie, tapez "Warhammer begin".');
     };
 });
 
